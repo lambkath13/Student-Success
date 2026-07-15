@@ -1,14 +1,15 @@
 import { Routes, Route } from 'react-router-dom';
 import MainLayout from './layout/MainLayout';
 import Dashboard from './pages/Dashboard';
+import StudentDashboard from './pages/StudentDashboard';
 import PlaceholderPage from './pages/PlaceholderPage';
-
 
 export default function App() {
   return (
     <Routes>
       <Route path="/" element={<MainLayout />}>
         <Route index element={<Dashboard />} />
+        <Route path="student" element={<StudentDashboard />} />
         <Route path="students" element={<PlaceholderPage title="Студенты" />} />
         <Route path="teachers" element={<PlaceholderPage title="Преподаватели" />} />
         <Route path="analytics" element={<PlaceholderPage title="Аналитика" />} />
